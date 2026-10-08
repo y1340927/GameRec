@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gamerec.gamerecommend.mapper.UserProfileMapper">
+
+    <!-- 根据 userId 查询 -->
+    <select id="selectByUserId" resultType="com.gamerec.gamerecommend.entity.UserProfile">
+        SELECT * FROM user_profile
+        WHERE user_id = #{userId}
+        LIMIT 1
+    </select>
+
+</mapper>

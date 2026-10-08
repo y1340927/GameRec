@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gamerec.gamerecommend.mapper.GameMapper">
+
+    <!-- 批量插入游戏（含扩展字段） -->
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO game
+        (game_id, game_name, game_name_cn, release_date, developer, publisher,
+         developers_json, publishers_json, platforms, platforms_cn, required_age, categories,
+         categories_cn, genres, genres_cn, genres_json, steamspy_tags, steamspy_tags_cn,
+         achievements, positive_ratings, negative_ratings, average_playtime,
+         median_playtime, owners, price, price_initial, is_free,
+         total_reviews, total_positive, total_negative,
+         review_score, review_score_desc, review_score_desc_cn,
+         positive_percentual, metacritic, short_description,
+         detailed_description, purchase_count, play_count, avg_play_hours)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+                #{item.gameId},
+                #{item.gameName},
+                #{item.gameNameCn},
+                #{item.releaseDate},
+                #{item.developer},
+                #{item.publisher},
+                #{item.developersJson},
+                #{item.publishersJson},
+                #{item.platforms},
+                #{item.platformsCn},
+                #{item.requiredAge},
+                #{item.categories},
+                #{item.categoriesCn},
+                #{item.genres},
+                #{item.genresCn},
+                #{item.genresJson},
+                #{item.steamspyTags},
+                #{item.steamspyTagsCn},
+                #{item.achievements},
+                #{item.positiveRatings},
+                #{item.negativeRatings},
+                #{item.averagePlaytime},
+                #{item.medianPlaytime},
+                #{item.owners},
+                #{item.price},
+                #{item.priceInitial},
+                #{item.isFree},
+                #{item.totalReviews},
+                #{item.totalPositive},
+                #{item.totalNegative},
+                #{item.reviewScore},
+                #{item.reviewScoreDesc},
+                #{item.reviewScoreDescCn},
+                #{item.positivePercentual},
+                #{item.metacritic},
+                #{item.shortDescription},
+                #{item.detailedDescription},
+                #{item.purchaseCount},
+                #{item.playCount},
+                #{item.avgPlayHours}
+            )
+        </foreach>
+    </insert>
+
+    <!-- 根据 gameId 查询 -->
+    <select id="selectByGameId" resultType="com.gamerec.gamerecommend.entity.Game">
+        SELECT * FROM game
+        WHERE game_id = #{gameId}
+        LIMIT 1
+    </select>
+
+    <!-- 根据游戏名（精确匹配英文名或中文名）查询 -->
+    <select id="selectByName" resultType="com.gamerec.gamerecommend.entity.Game">
+        SELECT * FROM game
+        WHERE game_name = #{name} OR game_name_cn = #{name}
+        LIMIT 5
+    </select>
+
+</mapper>

@@ -1,0 +1,88 @@
+# ===== Java / Maven =====
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+!gradle/wrapper/gradle-wrapper.jar
+
+# ===== Node.js =====
+node_modules/
+dist/
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.Python
+venv/
+.env
+*.egg
+
+# ===== IDE =====
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Environment =====
+.env
+.env.local
+application-local.yml
+
+# ===== Build artifacts =====
+*.tar.gz
+*.zip
+
+# ===== Generated images (large binary assets) =====
+generated-images/
+
+# ===== Database dump (large, regenerated on demand) =====
+sql/dump_*.sql
+
+# ===== WorkBuddy project memory =====
+.workbuddy/
+
+# ===== Test =====
+coverage/
+.nyc_output/
+
+# ===== 大数据产物（Spark 生成，可重新计算）=====
+spark-warehouse/
+metastore_db/
+derby.log
+
+# ===== 中间/废弃数据 =====
+data/merged/
+temp/
+tmp/
+nul
+
+# ===== 归档目录 =====
+.archive/
+scripts/_archive/
+
+# ===== 数据库备份 =====
+sql/backup_*.sql.gz
+sql/dump_*.sql.gz

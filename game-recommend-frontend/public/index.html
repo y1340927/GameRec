@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6fa">
+  <meta name="description" content="GameRec - 基于玩家画像的游戏推荐系统">
+  <title>GameRec - 基于玩家画像的游戏推荐系统</title>
+
+  <!-- DNS 预解析 -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+  <!-- 预连接 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- 字体异步加载 -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all';this.onload=null"
+  >
+
+  <!-- iOS Web App -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="GameRec">
+
+  <!-- 初始加载遮罩样式 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f6fa;
+      font-family: 'Inter', -apple-system, 'Microsoft YaHei', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* 字体加载失败时的降级 */
+    @font-face {
+      font-family: 'Inter-fallback';
+      src: local('Arial');
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+      size-adjust: 107%;
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    <strong>请启用 JavaScript 以运行 GameRec 智能游戏推荐系统。</strong>
+  </noscript>
+  <div id="app"></div>
+</body>
+</html>

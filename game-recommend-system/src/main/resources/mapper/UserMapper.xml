@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gamerec.gamerecommend.mapper.UserMapper">
+
+    <!-- 批量插入用户 -->
+    <insert id="insertBatch" parameterType="java.util.List">
+        INSERT INTO user (user_id, purchase_count, play_count, total_play_hours, avg_play_hours, purchase_play_ratio)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+                #{item.userId},
+                #{item.purchaseCount},
+                #{item.playCount},
+                #{item.totalPlayHours},
+                #{item.avgPlayHours},
+                #{item.purchasePlayRatio}
+            )
+        </foreach>
+    </insert>
+
+</mapper>
