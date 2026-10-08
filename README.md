@@ -2,8 +2,6 @@
 
 基于 Spring Boot + Vue 的游戏推荐与数据分析平台，集成多种推荐算法与 AI 智能问答。
 
-![Home](docs/screenshot-home.png)
-
 ## 功能特性
 
 - **首页概览**：核心指标看板（游戏数、玩家数、评价数），价格分布、近期游戏排行
@@ -81,7 +79,7 @@ GameRec/
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/Y1340927/GameRec.git
+git clone https://github.com/y1340927/GameRec.git
 cd GameRec
 ```
 
