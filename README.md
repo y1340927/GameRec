@@ -148,16 +148,16 @@ npm run serve
 ## 界面预览
 
 ### 首页概览
-![Dashboard](docs/screenshot-dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/y1340927/GameRec/main/docs/screenshot-dashboard.png)
 
 ### 数据分析大屏
-![Analytics](docs/screenshot-analytics.png)
+![Analytics](https://raw.githubusercontent.com/y1340927/GameRec/main/docs/screenshot-analytics.png)
 
 ### 游戏搜索
-![Search](docs/screenshot-search.png)
+![Search](https://raw.githubusercontent.com/y1340927/GameRec/main/docs/screenshot-search.png)
 
 ### AI 助手
-![AI Assistant](docs/screenshot-ai.png)
+![AI Assistant](https://raw.githubusercontent.com/y1340927/GameRec/main/docs/screenshot-ai.png)
 
 ## License
 
